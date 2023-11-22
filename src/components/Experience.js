@@ -17,20 +17,42 @@ function Experience() {
       <VerticalTimeline lineColor="#b46fd9">
         {experiences.map((e) => {
           const id = experiences.indexOf(e);
+          const grpNum = Math.floor(id / 2);
           const Icon = e.type === "work" ? WorkIcon : SchoolIcon;
           const alignment = id % 2 === 0 ? "left" : "right";
+          const bgColor = `rgb(${40 + 40 * grpNum}, ${62 - 20 * grpNum}, 128)`;
+          const iconColor = `rgb(${140 + 30 * grpNum}, ${
+            190 - 15 * grpNum
+          }, 255)`;
           return (
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: "rgb(80, 40, 128)", color: "#fff" }}
+              contentStyle={{
+                background: `rgb(${20 + 30 * grpNum}, ${
+                  82 - 15 * grpNum
+                }, 128)`,
+                color: "#fff",
+              }}
               contentArrowStyle={{
-                borderRight: "7px solid  rgb(80, 40, 128)",
+                borderRight: `7px solid  rgb(${20 + 30 * grpNum}, ${
+                  82 - 15 * grpNum
+                }, 128)`,
               }}
               date={e.date}
-              iconStyle={{ background: "rgb(203, 158, 255)", color: "#fff" }}
+              iconStyle={{
+                background: `rgb(${140 + 30 * grpNum}, ${
+                  190 - 15 * grpNum
+                }, 255)`,
+                color: "#fff",
+              }}
               icon={<Icon />}
               position={alignment}
             >
+              <span style={{ color: "black" }}>
+                id is: {id}
+                grp is: {grpNum}
+                bgColor is: {bgColor}
+              </span>
               <h3 className="vertical-timeline-element-title">{e.heading}</h3>
               <h4 className="vertical-timeline-element-subtitle">{e.sub}</h4>
               <p>{e.description}</p>
