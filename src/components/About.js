@@ -1,4 +1,4 @@
-import myImg from "./myImg.png";
+import myImg from "../images/meow.jpg";
 import "./styles/About.css";
 import {
   Image,

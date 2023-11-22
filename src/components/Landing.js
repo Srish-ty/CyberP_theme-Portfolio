@@ -1,5 +1,5 @@
 import "./styles/Landing.css";
-import video from "./Cyberpunkvid.mp4";
+import video from "../images/Cyberpunkvid.mp4";
 import Typist from "react-typist";
 import { useState, useEffect } from "react";
 import socialLinks from "../config/placeholders/SocialLinks";

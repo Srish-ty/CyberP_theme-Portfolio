@@ -4,8 +4,8 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { ReactComponent as WorkIcon } from "./work.svg";
-import { ReactComponent as SchoolIcon } from "./school.svg";
+import { ReactComponent as WorkIcon } from "../images/work.svg";
+import { ReactComponent as SchoolIcon } from "../images/school.svg";
 
 function Experience() {
   return (
@@ -25,9 +25,7 @@ function Experience() {
           <h3 className="vertical-timeline-element-title">
             Ryan International School,
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            Chandigarh
-          </h4>
+          <h4 className="vertical-timeline-element-subtitle">Chandigarh</h4>
           <p>Class 10th</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -42,9 +40,7 @@ function Experience() {
           <h3 className="vertical-timeline-element-title">
             National Institute of Technology,
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            Delhi
-          </h4>
+          <h4 className="vertical-timeline-element-subtitle">Delhi</h4>
           <p>Bachelor of Technology in Computer Science and Engineering</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -57,9 +53,12 @@ function Experience() {
           position={"right"}
         >
           <h3 className="vertical-timeline-element-title">Volunteer</h3>
-          <h4 className="vertical-timeline-element-subtitle">NIT-Delhi Technical Club, Upvision</h4>
+          <h4 className="vertical-timeline-element-subtitle">
+            NIT-Delhi Technical Club, Upvision
+          </h4>
           <p>
-            Worked to help organize various multiple tournaments for the college community.
+            Worked to help organize various multiple tournaments for the college
+            community.
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
@@ -72,9 +71,12 @@ function Experience() {
           position={"right"}
         >
           <h3 className="vertical-timeline-element-title">Executive Member</h3>
-          <h4 className="vertical-timeline-element-subtitle">Google Developer Student Club</h4>
+          <h4 className="vertical-timeline-element-subtitle">
+            Google Developer Student Club
+          </h4>
           <p>
-            Worked to organize various seminars and events which were attended by over 150 students.
+            Worked to organize various seminars and events which were attended
+            by over 150 students.
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>

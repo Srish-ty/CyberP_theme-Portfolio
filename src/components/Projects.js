@@ -1,8 +1,7 @@
 import "./styles/Projects.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 function Projects() {
   const [showproj, setShowproj] = useState("nothing");
@@ -55,7 +54,12 @@ function Projects() {
                 An android app to predict the waiting time for people waiting to
                 get a vaccine.
               </p>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/s-bhatla/VaxiQueue" class="btn">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/s-bhatla/VaxiQueue"
+                class="btn"
+              >
                 Go to Project
               </a>
             </div>
@@ -71,7 +75,12 @@ function Projects() {
             <div className="card-info">
               <h3>Chess Mini Game</h3>
               <p>A Chess Mini Game created using only the C language.</p>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/s-bhatla/Chess-Mini-Game" class="btn">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/s-bhatla/Chess-Mini-Game"
+                class="btn"
+              >
                 Go to Project
               </a>
             </div>
@@ -90,7 +99,12 @@ function Projects() {
                 A cross platform application created to test for
                 color-blindness.
               </p>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/s-bhatla/ChromaVision" class="btn">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/s-bhatla/ChromaVision"
+                class="btn"
+              >
                 Go to Project
               </a>
             </div>
@@ -109,7 +123,9 @@ function Projects() {
                 A functioning full-stack e-commerce website created using
                 ExpressJS.
               </p>
-              <a target="_blank" rel="noopener noreferrer" 
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://github.com/s-bhatla/swiftPharma/tree/master"
                 class="btn"
               >
