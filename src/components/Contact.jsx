@@ -27,7 +27,7 @@ function Contact() {
           you!
           <div className="d-flex justify-content-center mt-4">
             <a
-              href="mailto:sidroot02@gmail.com"
+              href="mailto:srushtimangutte@gmail.com"
               className="cool-btn contact-button"
             >
               <div className="pe-2 ps-2">Contact Me</div>

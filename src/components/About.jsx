@@ -18,7 +18,7 @@ function About() {
   }, []);
 
   return (
-    <AboutContainer className="container-fluid">
+    <AboutContainer className="container-fluid" id="about">
       <h2 className="topic-head">About Me</h2>
       <div className="row">
         <Image
@@ -57,7 +57,7 @@ function About() {
             className="button-link cool-btn"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://drive.google.com/drive/folders/19JnK8c2cq0SniX_DRKrVu_LJ35JI9Pwh?usp=sharing"
+            href="https://resume.io/"
           >
             Download Resume
           </a>

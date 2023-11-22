@@ -2,6 +2,7 @@ import "./styles/Projects.css";
 import { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import projects from "../config/projects/Projects";
 
 function Projects() {
   const [showproj, setShowproj] = useState("nothing");
@@ -9,8 +10,8 @@ function Projects() {
   const display_web = () => {
     setShowproj("display-web");
   };
-  const display_android = () => {
-    setShowproj("display-android");
+  const display_ML = () => {
+    setShowproj("display-ml");
   };
   const display_others = () => {
     setShowproj("display-others");
@@ -33,111 +34,44 @@ function Projects() {
         <div className="p-1 sorters  nav-effect" onClick={display_web}>
           Web
         </div>
-        <div className="p-1 sorters  nav-effect" onClick={display_android}>
-          Android
+        <div className="p-1 sorters  nav-effect" onClick={display_ML}>
+          Machine Learning
         </div>
         <div className="p-1 sorters  nav-effect" onClick={display_others}>
           Others
         </div>
       </div>
       <div className="row cards-list wrapper">
-        <div className={`col-md-4 col-sm-6 android ${showproj}`}>
-          <div className="mycard m-4">
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/vaxiqueue.png`}
-              alt="VaxiQueue"
-              height="200vh"
-            />
-            <div className="card-info">
-              <h3>Vaxiqueue</h3>
-              <p>
-                An android app to predict the waiting time for people waiting to
-                get a vaccine.
-              </p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/s-bhatla/VaxiQueue"
-                class="btn"
-              >
-                Go to Project
-              </a>
+        {projects.map((project) => {
+          // const id = projects.indexOf(project);
+          console.log(project);
+          return (
+            <div
+              key={project.title}
+              className={`col-md-4 col-sm-6 ${project.type} ${showproj}`}
+            >
+              <div className="m-4 mycard">
+                <img src={project.image} alt={project.title} height="200vh" />
+                <div className="card-info">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={project.url}
+                    class="btn"
+                  >
+                    Go to Project
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className={`col-md-4 col-sm-6 others ${showproj}`}>
-          <div className="mycard m-4">
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/minichess.png`}
-              alt="Chess Mini Game"
-              height="200vh"
-            />
-            <div className="card-info">
-              <h3>Chess Mini Game</h3>
-              <p>A Chess Mini Game created using only the C language.</p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/s-bhatla/Chess-Mini-Game"
-                class="btn"
-              >
-                Go to Project
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className={`col-md-4 col-sm-6 android ${showproj}`}>
-          <div className="m-4 mycard">
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/chromavision.jpg`}
-              alt="ChromaVision"
-              height="200vh"
-            />
-            <div className="card-info">
-              <h3>Chromavision</h3>
-              <p>
-                A cross platform application created to test for
-                color-blindness.
-              </p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/s-bhatla/ChromaVision"
-                class="btn"
-              >
-                Go to Project
-              </a>
-            </div>
-          </div>
-        </div>
+          );
+        })}
         <div className={`col-md-4 col-sm-6 web ${showproj}`}>
           <div className="m-4 mycard">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/swiftpharma.png`}
-              alt="SwiftPharma"
-              height="200vh"
-            />
-            <div className="card-info">
-              <h3>Swift Pharma</h3>
-              <p>
-                A functioning full-stack e-commerce website created using
-                ExpressJS.
-              </p>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/s-bhatla/swiftPharma/tree/master"
-                class="btn"
-              >
-                Go to Project
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className={`col-md-4 col-sm-6 web ${showproj}`}>
-          <div className="m-4 mycard">
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/portfolio.jpg`}
+              src={`${process.env.PUBLIC_URL}/assets/portfolio.png`}
               alt="This Portfolio Website"
               height="200vh"
             />

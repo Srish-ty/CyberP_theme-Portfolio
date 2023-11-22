@@ -44,7 +44,7 @@ const experiences = [
   },
   {
     heading: "VP of Technology",
-    sub: "Steathaim, early stage startup",
+    sub: "Stethaim, early stage startup",
     date: "Nov 2022 - present",
     description:
       "Handled all technical aspects from building ML models to websites and deploying to cloud.",
