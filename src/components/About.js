@@ -1,5 +1,13 @@
 import myImg from "./myImg.png";
 import "./styles/About.css";
+import {
+  Image,
+  MB2,
+  Emb,
+  FlexCont,
+  Summary,
+  AboutContainer,
+} from "./styles/About.styles";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -10,53 +18,52 @@ function About() {
   }, []);
 
   return (
-    <div id="about" className="container-fluid">
+    <AboutContainer className="container-fluid">
       <h2 className="topic-head">About Me</h2>
       <div className="row">
-        <img
+        <Image
           data-aos="fade-right"
           data-aos-once="true"
           src={myImg}
           alt="I, in the flesh."
           className="col-lg-4 image"
         />
-        <div
+        <Summary
           className="col-lg-8 d-flex justify-content-center flex-column summary"
           data-aos-once="true"
           data-aos="fade-up"
         >
-          <div className="d-flex justify-content-center flex-column">
-            <div className="mb-2">
-              Hey there, I'm Sidharth. I’ve always had a natural curiosity for
-              technology. As a child, I was fascinated with the hackers
-              presented in popular media and films. Because of that influence, I
-              became interested in exploring how computers work (and how to
-              break them). This passion led me to the NIT Delhi, where I am
-              currently pursuing my bachelor's degree in Computer Science and
-              Engineering.
-            </div>
-            <div className="mb-2">
-              I'm skilled at{" "}
-              <span className="embolden">Python, C, C++ </span>and <span className="embolden">JavaScript</span>{" "}
-              and I am currently exploring Web Development using the{" "}
-              <span className="embolden">MERN stack</span> and{" "}
-              <span className="embolden">Machine Learning with Python</span>.
-              When I’m not delving into technology, I’m either reading books or
-              playing the keys.{" "}
-            </div>
-          </div>
+          <FlexCont>
+            <MB2>
+              Hey there, I'm Srishty. I’ve always been a technocrat since
+              childhood. As a child, I was fascinated by tech and internet in
+              general. Because of that influence, I became interested in
+              exploring how internet and work (and how to break them). This
+              passion led me to create my first startup TheCodeWorld. Currently,
+              I'm in National Institute of Technology, Rourkela, where I am
+              currently pursuing my bTech degree.
+            </MB2>
+            <MB2>
+              I'm skilled at <Emb>Python, JavaScript, Bash, C++ </Emb>
+              and <Emb>GoLang </Emb>
+              I've worked on many project in full-stack using{" "}
+              <Emb>MERN stack. REST and GraphQL</Emb>. and I am currently
+              exploring <Emb> DevOps and Cloud. </Emb> I've learnt and created
+              projects in <Emb>Deep Learning with Python</Emb>. I'm an active
+              Open-Source contributor.
+            </MB2>
+          </FlexCont>
           <a
             className="button-link cool-btn"
             target="_blank"
             rel="noopener noreferrer"
             href="https://drive.google.com/drive/folders/19JnK8c2cq0SniX_DRKrVu_LJ35JI9Pwh?usp=sharing"
           >
-            
             Download Resume
           </a>
-        </div>
+        </Summary>
       </div>
-    </div>
+    </AboutContainer>
   );
 }
 
