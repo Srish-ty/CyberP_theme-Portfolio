@@ -12,7 +12,7 @@ function Counter() {
           <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
               <div className="number-counter">
-                {isVisible ? <CountUp end={5} duration={2} /> : 5}
+                {isVisible ? <CountUp end={6} duration={2} /> : 1}
               </div>
             )}
           </VisibilitySensor>
@@ -21,36 +21,40 @@ function Counter() {
       </div>
       <div className="d-flex flex-column justify-content-center counter-ele">
         <i class="fas fa-laptop-code my-icon"></i>
-        <div><VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+        <div>
+          <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
               <div className="number-counter">
-                {isVisible ? <CountUp end={8} duration={2} /> : 8}
+                {isVisible ? <CountUp end={3} duration={2} /> : 1}
               </div>
             )}
-          </VisibilitySensor></div>
+          </VisibilitySensor>
+        </div>
         <div>Hackathons Participated</div>
       </div>
       <div className="d-flex flex-column justify-content-center counter-ele">
         <i class="fas fa-award my-icon"></i>
-        <div><VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+        <div>
+          <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
               <div className="number-counter">
                 {isVisible ? <CountUp end={1} duration={2} /> : 1}
               </div>
             )}
-          </VisibilitySensor></div>
+          </VisibilitySensor>
+        </div>
         <div>Awards</div>
       </div>
       <div className="d-flex flex-column justify-content-center counter-ele">
-      <i class="fas fa-users my-icon"></i>
-        <div><VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+        <i class="fas fa-users my-icon"></i>
+        <div>
+          <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
             {({ isVisible }) => (
-              <div>
-                {isVisible ? <CountUp end={166} duration={2} /> : 166}
-              </div>
+              <div>{isVisible ? <CountUp end={1149} duration={2} /> : 500}</div>
             )}
-          </VisibilitySensor></div>
-        <div>LinkedIn Connections</div>
+          </VisibilitySensor>
+        </div>
+        <div>LinkedIn Followers</div>
       </div>
     </div>
   );
