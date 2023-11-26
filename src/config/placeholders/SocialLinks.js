@@ -15,15 +15,20 @@ const socialLinks = [
     url: "https://github.com/Srish-ty",
   },
   {
-    name: "blog",
-    icon: "fa-brands fa-wordpress",
-    url: "https://msrishty.wordpress.com",
-  },
-  {
     name: "Email",
     icon: "fas fa-envelope",
     url: "mailto:srushtimangutte@gmail.com",
     hide: true,
+  },
+  {
+    name: "wp-blog",
+    icon: "fa-brands fa-wordpress",
+    url: "https://msrishty.wordpress.com",
+  },
+  {
+    name: "medium-blog",
+    icon: "fa-brands fa-medium",
+    url: "https://medium.com/@msrishty",
   },
   {
     name: "Youtube",
