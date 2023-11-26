@@ -63,16 +63,18 @@ function Landing() {
             socialLinks.map((link) => {
               const classes = "fab p-3 " + link.icon;
               console.log(classes);
-              return (
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={link.url}
-                  key={link.name}
-                >
-                  <i class={classes}></i>
-                </a>
-              );
+              if (link.hide !== true) {
+                return (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={link.url}
+                    key={link.name}
+                  >
+                    <i class={classes}></i>
+                  </a>
+                );
+              }
             })
           }
         </div>
