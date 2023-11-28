@@ -57,7 +57,7 @@ function About() {
             className="button-link cool-btn"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://resume.io/"
+            href="https://drive.google.com/drive/folders/1ulBx8D5tBBexqPkdpy1xrC1s4ClaKIA5?usp=sharing"
           >
             Download Resume
           </a>
