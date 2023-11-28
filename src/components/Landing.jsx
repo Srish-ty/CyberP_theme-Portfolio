@@ -2,6 +2,7 @@ import "./styles/Landing.css";
 import video from "../images/Cyberpunkvid.mp4";
 import Typist from "react-typist";
 import { useState, useEffect } from "react";
+import { LogoImg, LogoCont } from "./styles/socialLogo";
 import socialLinks from "../config/placeholders/SocialLinks";
 
 function Landing() {
@@ -57,7 +58,7 @@ function Landing() {
             </div>
           </h2>
         </div>
-        <div class="d-flex justify-content-center landing-icons">
+        <div class="d-flex landing-icons">
           {
             // eslint-disable-next-line array-callback-return
             socialLinks.map((link) => {
@@ -71,7 +72,17 @@ function Landing() {
                     href={link.url}
                     key={link.name}
                   >
-                    <i class={classes}></i>
+                    {link.icon ? (
+                      <i class={classes}></i>
+                    ) : (
+                      <LogoCont>
+                        <LogoImg
+                          className="sociallogo_img"
+                          src={link.img}
+                          alt={link.name}
+                        />
+                      </LogoCont>
+                    )}
                   </a>
                 );
               }

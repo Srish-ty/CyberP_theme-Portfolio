@@ -1,3 +1,5 @@
+import lfx_logo from "../../images/olfx_logo.svg";
+
 const socialLinks = [
   {
     name: "LinkedIn",
@@ -34,6 +36,12 @@ const socialLinks = [
     name: "Youtube",
     icon: "fa-youtube",
     url: "https://www.youtube.com/@l4dybu9",
+  },
+  {
+    name: "lfx",
+    icon: "fas fa-laptop",
+    img: lfx_logo,
+    url: "https://openprofile.dev/profile/l4dybu6",
   },
 ];
 
