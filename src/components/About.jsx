@@ -7,11 +7,16 @@ import {
   FlexCont,
   Summary,
   AboutContainer,
+  Emb2,
 } from "./styles/About.styles";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { aboutPara1, aboutPara3 } from "../config/content/AboutData";
+import {
+  aboutPara1,
+  AboutComponent,
+  aboutPara3,
+} from "../config/content/AboutData";
 
 function About() {
   useEffect(() => {
@@ -36,20 +41,23 @@ function About() {
         >
           <FlexCont>
             <MB2>{aboutPara1}</MB2>
+
+            <AboutComponent />
+
             <MB2>
               I'm skilled at{" "}
-              <Emb>
-                {aboutPara3.stack.slice(0, 4).map((s) => {
+              <Emb2>
+                {aboutPara3.stack.slice(0, -2).map((s) => {
                   return s + ", ";
                 })}{" "}
-              </Emb>
-              and <Emb>GoLang </Emb>
+              </Emb2>
+              and <Emb2>GoLang </Emb2>
               I've worked on many project in full-stack using{" "}
-              <Emb>
+              <Emb2>
                 {aboutPara3.stack.slice(-2).map((s) => {
                   return s + ". ";
                 })}
-              </Emb>
+              </Emb2>
               and I am currently exploring <Emb> {aboutPara3.fields[0]} </Emb>
               I've learnt and created projects in{" "}
               <Emb> {aboutPara3.fields[1]} </Emb>. I'm an active Open-Source
