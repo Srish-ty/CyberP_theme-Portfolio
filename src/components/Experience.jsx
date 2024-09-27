@@ -21,7 +21,7 @@ function Experience() {
           const Icon =
             e.type === "work"
               ? WorkIcon
-              : e.type == "commu"
+              : e.type === "commu"
               ? ComIcon
               : SchoolIcon;
           const alignment = id % 2 === 0 ? "left" : "right";
