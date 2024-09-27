@@ -7,10 +7,16 @@ import {
   FlexCont,
   Summary,
   AboutContainer,
+  Emb2,
 } from "./styles/About.styles";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import {
+  aboutPara1,
+  AboutComponent,
+  aboutPara3,
+} from "../config/content/AboutData";
 
 function About() {
   useEffect(() => {
@@ -34,23 +40,28 @@ function About() {
           data-aos="fade-up"
         >
           <FlexCont>
+            <MB2>{aboutPara1}</MB2>
+
+            <AboutComponent />
+
             <MB2>
-              Hey there, I'm Srishty. I’ve always been a technocrat since
-              childhood. As a child, I was fascinated by tech and internet in
-              general. Because of that influence, I became interested in
-              exploring how internet and work (and how to break them). This
-              passion led me to create my first startup TheCodeWorld. Currently,
-              I'm in National Institute of Technology, Rourkela, where I am
-              currently pursuing my bTech degree.
-            </MB2>
-            <MB2>
-              I'm skilled at <Emb>Python, JavaScript, Bash, C++ </Emb>
-              and <Emb>GoLang </Emb>
+              I'm skilled at{" "}
+              <Emb2>
+                {aboutPara3.stack.slice(0, -2).map((s) => {
+                  return s + ", ";
+                })}{" "}
+              </Emb2>
+              and <Emb2>GoLang </Emb2>
               I've worked on many project in full-stack using{" "}
-              <Emb>MERN stack. REST and GraphQL</Emb>. and I am currently
-              exploring <Emb> DevOps and Cloud. </Emb> I've learnt and created
-              projects in <Emb>Deep Learning with Python</Emb>. I'm an active
-              Open-Source contributor.
+              <Emb2>
+                {aboutPara3.stack.slice(-2).map((s) => {
+                  return s + ". ";
+                })}
+              </Emb2>
+              and I am currently exploring <Emb> {aboutPara3.fields[0]} </Emb>
+              I've learnt and created projects in{" "}
+              <Emb> {aboutPara3.fields[1]} </Emb>. I'm an active Open-Source
+              contributor.
             </MB2>
           </FlexCont>
           <a

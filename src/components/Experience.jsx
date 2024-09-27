@@ -6,6 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { ReactComponent as WorkIcon } from "../images/work.svg";
 import { ReactComponent as SchoolIcon } from "../images/school.svg";
+import { ReactComponent as ComIcon } from "../images/community.svg";
 import experiences from "../config/experience/Experience";
 
 function Experience() {
@@ -17,7 +18,12 @@ function Experience() {
         {experiences.map((e) => {
           const id = experiences.indexOf(e);
           const grpNum = Math.floor(id / 2);
-          const Icon = e.type === "work" ? WorkIcon : SchoolIcon;
+          const Icon =
+            e.type === "work"
+              ? WorkIcon
+              : e.type === "commu"
+              ? ComIcon
+              : SchoolIcon;
           const alignment = id % 2 === 0 ? "left" : "right";
           return (
             <VerticalTimelineElement

@@ -114,3 +114,8 @@ export const Emb = styled.span`
   font-weight: 600;
   color: #03e9f4;
 `;
+
+export const Emb2 = styled.span`
+  font-weight: 420;
+  color: #dedede;
+`;

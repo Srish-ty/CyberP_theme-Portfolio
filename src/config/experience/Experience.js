@@ -22,16 +22,16 @@ const experiences = [
     description:
       "completed course and became a student expert in Postman Student Expert Program.",
     alignment: "right",
-    type: "work",
+    type: "commu",
   },
   {
-    heading: "Developer",
-    sub: "Google Developer Student Club",
+    heading: "Lead Organiser",
+    sub: "Google Developers Group, OnCampus NITR",
     date: "Nov 2022 - present",
     description:
       "Worked to organize various seminars and events which were attended by over 150 students. conducted workshops on various topics like Git and GitHub, Google Cloud Platform, etc.",
     alignment: "right",
-    type: "work",
+    type: "commu",
   },
   {
     heading: "OpenSource Contributor",
@@ -49,6 +49,24 @@ const experiences = [
     description:
       "Handled all technical aspects from building ML models to websites and deploying to cloud.",
     alignment: "left",
+    type: "work",
+  },
+  {
+    heading: "Founder and Orgnaiser",
+    sub: "AWS userGroup Sangli-Kolhapur",
+    date: "Aug 2024 - present",
+    description:
+      "Conducted worskhops, seminars and meetups on AWS for Students and Developers' community.",
+    alignment: "left",
+    type: "commu",
+  },
+
+  {
+    heading: "SDE Intern",
+    sub: "OpenGig",
+    date: "Aug 2024 - Sep 2024",
+    description: "Built products. Stack: Nest.js, express, node.js, Docker",
+    alignment: "right",
     type: "work",
   },
 ];
